@@ -142,10 +142,11 @@ async function run () {
     const pullRequest = context.payload.pull_request
     let ref
     if (pullRequest) {
-      ref = pullRequest.merge_commit_sha
+      ref = pullRequest.head.sha
     } else {
       ref = context.sha
     }
+    info(`scott {ref: '${ref}', c_sha: '${context.sha}', pr_mc_sha: ${pullRequest.merge_commit_sha}}, pr_h_sha: ${pullRequest.head.sha}}`)
     const owner = context.repo.owner
     const repo = context.repo.repo
 
