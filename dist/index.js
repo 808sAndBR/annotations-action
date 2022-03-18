@@ -8634,10 +8634,11 @@ async function run () {
     const pullRequest = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.pull_request
     let ref
     if (pullRequest) {
-      ref = pullRequest.merge_commit_sha
+      ref = pullRequest.head.sha
     } else {
-      ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.sha
+      ref = context.sha
     }
+    info(`scott {ref: '${ref}', c_sha: '${context.sha}', pr_mc_sha: ${pullRequest.merge_commit_sha}}, pr_h_sha: ${pullRequest.head.sha}}`)
     const owner = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.owner
     const repo = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.repo
 
