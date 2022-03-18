@@ -8638,7 +8638,7 @@ async function run () {
     } else {
       ref = context.sha
     }
-    info(`scott {ref: '${ref}', c_sha: '${context.sha}', pr_mc_sha: ${pullRequest.merge_commit_sha}}, pr_h_sha: ${pullRequest.head.sha}}`)
+    ;(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`scott {ref: '${ref}', c_sha: '${context.sha}', pr_mc_sha: ${pullRequest.merge_commit_sha}}, pr_h_sha: ${pullRequest.head.sha}}`)
     const owner = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.owner
     const repo = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.repo
 
