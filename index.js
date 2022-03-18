@@ -142,7 +142,7 @@ async function run () {
     const pullRequest = context.payload.pull_request
     let ref
     if (pullRequest) {
-      ref = pullRequest.head.sha
+      ref = pullRequest.merge_commit_sha
     } else {
       ref = context.sha
     }
