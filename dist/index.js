@@ -8634,7 +8634,7 @@ async function run () {
     const pullRequest = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.pull_request
     let ref
     if (pullRequest) {
-      ref = pullRequest.head.sha
+      ref = pullRequest.merge_commit_sha
     } else {
       ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.sha
     }
